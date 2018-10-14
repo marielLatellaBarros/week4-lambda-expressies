@@ -23,4 +23,7 @@ public class NumberSelector {
         return numberMachine.processNumbers(number -> number > minimumNumber);
     }
 
+    public String printHexNumbers() {
+        return numberMachine.convertNumbers(number -> Integer.toHexString(number));
+    }
 }
