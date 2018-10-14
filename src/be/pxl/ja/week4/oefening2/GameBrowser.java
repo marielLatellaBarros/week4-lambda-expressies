@@ -11,14 +11,11 @@ public class GameBrowser {
     }
 
     public List<VideoGame> showGamesForSearch(String search) {
-        return gameCollection.selectGames(new Predicate<VideoGame>() {
-            @Override
-            public boolean test(VideoGame videoGame) {
-                if (videoGame.getName().toLowerCase().contains(search.toLowerCase())) {
-                    return true;
-                }
-                return false;
+        return gameCollection.selectGames(videoGame -> {
+            if (videoGame.getName().toLowerCase().contains(search.toLowerCase())) {
+                return true;
             }
+            return false;
         });
     }
 }
