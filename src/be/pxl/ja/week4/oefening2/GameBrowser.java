@@ -11,8 +11,6 @@ public class GameBrowser {
     }
 
     public List<VideoGame> showGamesForSearch(String search) {
-        return gameCollection.selectGames(videoGame -> {
-            return videoGame.getName().toLowerCase().contains(search.toLowerCase());
-        });
+        return gameCollection.selectGames(videoGame -> videoGame.getName().toLowerCase().contains(search.toLowerCase()));
     }
 }
