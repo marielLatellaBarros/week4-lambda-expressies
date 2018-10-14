@@ -8,7 +8,6 @@ public class NumberSelector {
     }
 
     public String showEvenNumbers(){
-
          return numberMachine.processNumbers(new NumberFilter() {
             @Override
             public boolean check(int number) {
@@ -17,6 +16,15 @@ public class NumberSelector {
                 }
                 return false;
             }
+        });
+    }
+
+    public String showNumbersAbove(int minimumNumber) {
+        return numberMachine.processNumbers(number -> {
+            if (number > minimumNumber) {
+                return true;
+            }
+            return false;
         });
     }
 }
