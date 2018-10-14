@@ -24,6 +24,6 @@ public class NumberSelector {
     }
 
     public String printHexNumbers() {
-        return numberMachine.convertNumbers(number -> Integer.toHexString(number));
+        return numberMachine.convertNumbers(Integer::toHexString);
     }
 }
