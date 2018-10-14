@@ -1,7 +1,6 @@
 package be.pxl.ja.week4.oefening1;
 
 import java.util.ArrayList;
-import java.util.function.Function;
 
 public class NumberMachine {
 	private ArrayList<Integer> numbers = new ArrayList<>();
