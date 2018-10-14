@@ -1,5 +1,6 @@
-package be.pxl.ja.week4.opgaves.opgave01;
+package be.pxl.ja.week4.opgaves.opgave01_02;
 
+//Opgave 1
 public class User {
     private String name;
     private String role;
@@ -25,9 +26,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+        return name + " [" + role + "]";
     }
 }
