@@ -12,10 +12,7 @@ public class GameBrowser {
 
     public List<VideoGame> showGamesForSearch(String search) {
         return gameCollection.selectGames(videoGame -> {
-            if (videoGame.getName().toLowerCase().contains(search.toLowerCase())) {
-                return true;
-            }
-            return false;
+            return videoGame.getName().toLowerCase().contains(search.toLowerCase());
         });
     }
 }
