@@ -20,11 +20,7 @@ public class NumberSelector {
     }
 
     public String showNumbersAbove(int minimumNumber) {
-        return numberMachine.processNumbers(number -> {
-            if (number > minimumNumber) {
-                return true;
-            }
-            return false;
-        });
+        return numberMachine.processNumbers(number -> number > minimumNumber);
     }
+
 }
